@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Computers Store — Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-dot" aria-hidden="true"></div>
+        <h1 class="site-title">computers store</h1>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#">Products</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <div class="right-controls" style="display:flex;align-items:center;gap:12px;">
+        <div class="search-wrap">
+          <input id="search" class="search" type="search" placeholder="Quick search — e.g. laptop" aria-label="Search products" />
+        </div>
+
+        <button id="cartBtn" class="cart-btn" aria-label="Open cart">
+          Cart <span id="cartCount" class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-label="Featured">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h2 class="hero-subtitle">Asus</h2>
+          <h1 class="hero-title">Vivobook</h1>
+          <p class="hero-desc">Thin. Light. Powerful. Beautifully engineered for everyday creativity and productivity.</p>
+          <a class="btn-cta" href="#" id="shopCollection">Shop collection</a>
+
+          <div class="feature-thumbs" aria-hidden="true">
+            <div class="thumb small">Ause Denbools</div>
+            <div class="thumb small">Beag Vade</div>
+            <div class="thumb small">Herner Ac 'Dop</div>
+          </div>
+        </div>
+
+        <div class="hero-visuals" id="heroCarousel" tabindex="0">
+          <!-- Carousel slides -->
+          <div class="carousel">
+            <div class="slide" data-index="0" aria-hidden="false">
+              <div class="laptop laptop-left float" data-screen="https://picsum.photos/seed/l1/520/320">
+                <img src="https://picsum.photos/seed/l1/520/320" alt="Laptop showing colorful UI">
+              </div>
+              <div class="laptop laptop-right float delay" data-screen="https://picsum.photos/seed/l2/420/260">
+                <img src="https://picsum.photos/seed/l2/420/260" alt="Laptop showing logo">
+              </div>
+            </div>
+
+            <div class="slide" data-index="1" aria-hidden="true" hidden>
+              <div class="laptop laptop-left float" data-screen="https://picsum.photos/seed/l3/520/320">
+                <img src="https://picsum.photos/seed/l3/520/320" alt="Laptop showing gallery">
+              </div>
+              <div class="laptop laptop-right float delay" data-screen="https://picsum.photos/seed/l4/420/260">
+                <img src="https://picsum.photos/seed/l4/420/260" alt="Laptop showing presentation">
+              </div>
+            </div>
+
+            <div class="slide" data-index="2" aria-hidden="true" hidden>
+              <div class="laptop laptop-left float" data-screen="https://picsum.photos/seed/l5/520/320">
+                <img src="https://picsum.photos/seed/l5/520/320" alt="Laptop showing dashboard">
+              </div>
+              <div class="laptop laptop-right float delay" data-screen="https://picsum.photos/seed/l6/420/260">
+                <img src="https://picsum.photos/seed/l6/420/260" alt="Laptop showing news">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-controls" aria-hidden="false">
+            <button id="prevSlide" class="carousel-btn" aria-label="Previous slide">◀</button>
+            <div id="dots" class="dots" aria-hidden="true"></div>
+            <button id="nextSlide" class="carousel-btn" aria-label="Next slide">▶</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products container" aria-label="Products">
+      <div class="product-grid" id="productGrid">
+        <!-- Product cards each have data-title for filtering and data-id for cart actions -->
+        <article class="card" data-title="compact bag" data-id="p1">
+          <img src="https://gearopen.com/wp-content/uploads/2018/07/MSI-GS73VR-Stealth-Pro-4K-016-2-695x528.jpg" alt="Compact bag">
+          <div class="card-body">
+            <h3>MSI Laptop</h3>
+            <p class="price">$300.05</p>
+            <a class="card-btn" href="#" data-action="details">Details</a>
+            <button class="card-add" data-action="add">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="card" data-title="external drive" data-id="p2">
+          <img src="https://news.lenovo.com/wp-content/uploads/2023/03/13_B_Lenovo_LOQ_Hero_Family.jpg" alt="External drive">
+          <div class="card-body">
+            <h3>Lenovo External Drive</h3>
+            <p class="price">$309.05</p>
+            <a class="card-btn" href="#" data-action="details">Details</a>
+            <button class="card-add" data-action="add">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="card" data-title="led monitor" data-id="p3">
+          <img src="picture/MACBOOK.jpg" alt="LED Monitor">
+          <div class="card-body">
+            <h3>MacBook Pro</h3>
+            <p class="price">$590.05</p>
+            <a class="card-btn" href="#" data-action="details">View</a>
+            <button class="card-add" data-action="add">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="card" data-title="desktop monitor" data-id="p4">
+          <img src="picture/Monitorwebp.webp" alt="Desktop Monitor">
+          <div class="card-body">
+            <h3>Desktop Monitor</h3>
+            <p class="price">$300.05</p>
+            <a class="card-btn" href="#" data-action="details">Buy</a>
+            <button class="card-add" data-action="add">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="card" data-title="internal drive" data-id="p5">
+          <img src="picture/Aus.jpg" alt="Internal Drive">
+          <div class="card-body">
+            <h3>AsusTuf </h3>
+            <p class="price">$309.05</p>
+            <a class="card-btn" href="#" data-action="details">Details</a>
+            <button class="card-add" data-action="add">Add to cart</button>
+          </div>
+        </article>
+
+        <article class="card" data-title="curved monitor" data-id="p6">
+          <img src="picture/Acer.jpg" alt="Curved Monitor">
+          <div class="card-body">
+            <h3>Acer Laptop</h3>
+            <p class="price">$500.05</p>
+            <a class="card-btn" href="#" data-action="details">Buy</a>
+            <button class="card-add" data-action="add">Add to cart</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© Computers Store — demo layout</p>
+        <div class="socials" aria-hidden="true">
+          <span class="dot blue"></span>
+          <span class="dot cyan"></span>
+          <span class="dot orange"></span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
